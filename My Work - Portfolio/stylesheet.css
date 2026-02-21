@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Meiryo';
+}
+body {
+    color: #24292E;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #24292E;
+}
+li {
+    list-style: none;
+}
+header, main {
+    max-width: 960px;
+    padding: 0 4%;
+    margin: 0 auto;
+}
+.section-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section {
+    margin-top: 80px;
+}
+
+/*ヘッダー*/
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+}
+#header-logo {
+    max-width: 120px;
+}
+#header-lists {
+    display: flex;
+}
+#header-lists li {
+    margin-left: 30px;
+    font-size: 14.4px;
+}
+#header-lists li:hover {
+    opacity: 0.7;
+}
+#insta-logo {
+    max-width: 20px;
+}
+
+/*メインビジュアル*/
+#mainvisual img {
+    object-fit: cover;
+    height: 420px;
+    width: 100%;
+    margin-top: 80px;
+}
+#mainvisual-sp {
+    display: none;
+}
+
+/*About*/
+#about-section li {
+    margin-bottom: 40px;
+    font-size: 14.4px;
+}
+#about-section ul {
+    padding-left: 0;
+}
+
+/*Works*/
+#works-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#works-img img {
+        width: 32%;
+        margin-bottom: 20px;
+}
+
+/*News*/
+#news-list {
+    padding: 0;
+}
+.news {
+    font-size: 14.4px;
+    border-bottom: #C8C8C8 solid 1px;
+    padding: 15px;
+    display: flex;
+}
+.news span {
+    display: inline-block;
+}
+.news:first-child {
+    border-top: #C8C8C8 solid 1px;
+}
+.date {   
+    width: 25%;
+}
+.title {
+    width: 75%;
+}
+
+/*Contact*/
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.area {
+    width: 80%;
+    font-size: 14.4px;
+    box-sizing: border-box;
+    border: #C8C8C8 solid 1px;
+    padding: 10px;
+}
+.area:focus {
+    border: #24292E solid 2px;
+    border-radius: 4px;
+    outline: none;
+}
+.name-area, .email-area {
+    height: 40px;
+}
+.message-area {
+    height: 80px;
+}
+#btn {
+    display: block;
+    margin: 30px auto 120px auto;
+    width: 200px;
+    height: 50px;
+    border-style: none;
+    background-color: #24292E;
+    color: #FFFFFF;
+    transition: 0.3s;
+}
+#btn:hover {
+    background-color: #FFFFFF;
+    color: #24292E;
+    border: #24292E solid 1px;
+}
+
+/*フッター*/
+#footer {
+    height: 30px;
+    background-color: #24292E;
+    text-align: center;
+}
+#footer span {
+    color: #FFFFFF;
+    font-size: 8px;
+}
+
+/*SP*/
+@media (max-width: 600px) {
+    #header {
+        flex-direction: column;
+        margin-top: 0;
+    }
+    #header-lists {
+        margin-top: -20px;
+        padding-left: 0;
+    }
+    #header-lists li {
+        font-size: 12.8px;
+    }
+    #mainvisual img {
+        margin-top: 0;
+        
+    }
+    #mainvisual-pc {
+        display: none;
+    }
+    #mainvisual-sp {
+        display: block;
+    }
+    #works-img {
+        flex-direction: column;
+    }
+    #works-img img {
+        width: 100%;
+    }
+    .news {
+        flex-direction: column;
+    }
+    .date, .title {
+        width: 100%;
+    }
+    .contact-item {
+        flex-direction: column;
+    }
+    .area {
+        width: 100%;
+    }
+    .message-area {
+        height: 160px;
+    }
+}
